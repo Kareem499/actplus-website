@@ -142,12 +142,21 @@
 .cta-strip p { color: rgba(255,255,255,0.8); margin-bottom: 2rem; }
 @media(max-width:900px) { .hero-inner { grid-template-columns: 1fr; } .hero-visual { display: none; } .why-grid { grid-template-columns: 1fr; } .why-visual { display: none; } .services-grid { grid-template-columns: repeat(2,1fr); } .process-steps { grid-template-columns: repeat(2,1fr); } .process-steps::before { display: none; } }
 @media(max-width:640px) { .services-grid { grid-template-columns: 1fr; } .process-steps { grid-template-columns: 1fr; } .hero-stats { gap: 1.5rem; } }
-.clients-carousel { background: #0E1F38; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 1.5rem 0; overflow: hidden; }
-.clients-track { display: flex; gap: 1rem; animation: logoScroll 40s linear infinite; width: max-content; }
-.client-card { width: 320px; height: 160px; background: #fff; border-radius: 12px; padding: 0.625rem; flex-shrink: 0; opacity: 0.85; transition: opacity 0.2s, transform 0.2s; display: flex; align-items: center; justify-content: center; }
-.client-card:hover { opacity: 1; transform: translateY(-2px); }
-.client-card img { width: 100%; height: 100%; object-fit: contain; }
+.clients-carousel { background: #0E1F38; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 1.5rem 0; }
+.clients-carousel-header { text-align: center; padding: 2.5rem 0 1.5rem; }
+.clients-carousel-header h2 { font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+.clients-carousel-header p { color: rgba(255,255,255,0.55); font-size: 0.95rem; }
+.marquee-wrapper { overflow: hidden; -webkit-mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%); mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%); margin-bottom: 1rem; }
+.marquee-wrapper:last-child { margin-bottom: 0; }
+.clients-track { display: flex; gap: 1rem; width: max-content; animation: logoScroll 40s linear infinite; }
+.clients-track.reverse { animation: logoScrollReverse 45s linear infinite; }
+.marquee-wrapper:hover .clients-track { animation-play-state: paused; }
+.client-card { width: 220px; height: 110px; background: #fff; border-radius: 10px; padding: 0.75rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: transform 0.2s, box-shadow 0.2s; }
+.client-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.35); }
+.client-card img { width: 100%; height: 100%; object-fit: contain; filter: grayscale(30%); transition: filter 0.3s ease; }
+.client-card:hover img { filter: grayscale(0%); }
 @keyframes logoScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+@keyframes logoScrollReverse { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXS97MYKLJ"></script>
@@ -238,41 +247,57 @@
 </div>
 <!-- Client Logo Carousel -->
 <div class="clients-carousel">
-  <div class="clients-track">
-    <div class="client-card"><img src="assets/clients/1%20Paltel.svg" alt="Paltel"></div>
-    <div class="client-card" style="overflow:hidden"><img src="assets/clients/2%20Jawwal.svg" alt="Jawwal" style="transform:scale(1.1);transform-origin:center"></div>
-    <div class="client-card"><img src="assets/clients/3%20Reach.svg" alt="Reach"></div>
-    <div class="client-card"><img src="assets/clients/4%20Palestinian%20Authority.svg" alt="Palestinian Authority"></div>
-    <div class="client-card"><img src="assets/clients/5%20PCBS.svg" alt="PCBS"></div>
-    <div class="client-card"><img src="assets/clients/6%20Ministry%20of%20Telecommunications%20%26%20Digital%20Economy.svg" alt="MTIT"></div>
-    <div class="client-card" style="overflow:hidden"><img src="assets/clients/MTIT%20New.avif" alt="MTIT New" style="transform:scale(1.47);transform-origin:center" width="500" height="300" loading="lazy"></div>
-    <div class="client-card" style="overflow:hidden"><img src="assets/clients/PMA%20Final%20.jpg" alt="PMA" style="transform:scale(1.27);transform-origin:center" width="640" height="360" loading="lazy"></div>
-    <div class="client-card"><img src="assets/clients/8%20World%20Bank.svg" alt="World Bank"></div>
-    <div class="client-card"><img src="assets/clients/9%20Bank%20of%20Palestine.svg" alt="Bank of Palestine"></div>
-    <div class="client-card"><img src="assets/clients/12%20AlQuds%20Pharma.svg" alt="AlQuds Pharma"></div>
-    <div class="client-card"><img src="assets/clients/13%20GIZ.svg" alt="GIZ"></div>
-    <div class="client-card"><img src="assets/clients/14%20Munib%20%26%20Angela%20Masri%20Logo.svg" alt="Munib &amp; Angela Masri"></div>
-    <div class="client-card"><img src="assets/clients/15%20Upliftt.svg" alt="Upliftt"></div>
-    <div class="client-card"><img src="assets/clients/Playgeko%20logo.svg" alt="Playgeko"></div>
-    <div class="client-card" style="overflow:hidden"><img src="assets/clients/Playsonic%20Logo.jpg" alt="Playsonic" style="transform:scale(1.4);transform-origin:center" width="640" height="360" loading="lazy"></div>
-    <div class="client-card"><img src="assets/clients/16.%20BK%20Plus%20Europe.png" alt="BK Plus Europe" style="transform:scale(0.7);transform-origin:center" width="330" height="240" loading="lazy"></div>
-    <div class="client-card"><img src="assets/clients/1%20Paltel.svg" alt="Paltel"></div>
-    <div class="client-card" style="overflow:hidden"><img src="assets/clients/2%20Jawwal.svg" alt="Jawwal" style="transform:scale(1.1);transform-origin:center"></div>
-    <div class="client-card"><img src="assets/clients/3%20Reach.svg" alt="Reach"></div>
-    <div class="client-card"><img src="assets/clients/4%20Palestinian%20Authority.svg" alt="Palestinian Authority"></div>
-    <div class="client-card"><img src="assets/clients/5%20PCBS.svg" alt="PCBS"></div>
-    <div class="client-card"><img src="assets/clients/6%20Ministry%20of%20Telecommunications%20%26%20Digital%20Economy.svg" alt="MTIT"></div>
-    <div class="client-card" style="overflow:hidden"><img src="assets/clients/MTIT%20New.avif" alt="MTIT New" style="transform:scale(1.47);transform-origin:center" width="500" height="300" loading="lazy"></div>
-    <div class="client-card" style="overflow:hidden"><img src="assets/clients/PMA%20Final%20.jpg" alt="PMA" style="transform:scale(1.27);transform-origin:center" width="640" height="360" loading="lazy"></div>
-    <div class="client-card"><img src="assets/clients/8%20World%20Bank.svg" alt="World Bank"></div>
-    <div class="client-card"><img src="assets/clients/9%20Bank%20of%20Palestine.svg" alt="Bank of Palestine"></div>
-    <div class="client-card"><img src="assets/clients/12%20AlQuds%20Pharma.svg" alt="AlQuds Pharma"></div>
-    <div class="client-card"><img src="assets/clients/13%20GIZ.svg" alt="GIZ"></div>
-    <div class="client-card"><img src="assets/clients/14%20Munib%20%26%20Angela%20Masri%20Logo.svg" alt="Munib &amp; Angela Masri"></div>
-    <div class="client-card"><img src="assets/clients/15%20Upliftt.svg" alt="Upliftt"></div>
-    <div class="client-card"><img src="assets/clients/Playgeko%20logo.svg" alt="Playgeko"></div>
-    <div class="client-card" style="overflow:hidden"><img src="assets/clients/Playsonic%20Logo.jpg" alt="Playsonic" style="transform:scale(1.4);transform-origin:center" width="640" height="360" loading="lazy"></div>
-    <div class="client-card"><img src="assets/clients/16.%20BK%20Plus%20Europe.png" alt="BK Plus Europe" style="transform:scale(0.7);transform-origin:center" width="330" height="240" loading="lazy"></div>
+  <div class="clients-carousel-header">
+    <h2>Trusted By</h2>
+    <p>Partners &amp; clients across the Middle East and beyond</p>
+  </div>
+  <!-- Row 1 → scrolls left -->
+  <div class="marquee-wrapper">
+    <div class="clients-track">
+      <div class="client-card"><img src="assets/clients/1%20Paltel.svg" alt="Paltel"></div>
+      <div class="client-card" style="overflow:hidden"><img src="assets/clients/2%20Jawwal.svg" alt="Jawwal" style="transform:scale(1.1);transform-origin:center"></div>
+      <div class="client-card"><img src="assets/clients/3%20Reach.svg" alt="Reach"></div>
+      <div class="client-card"><img src="assets/clients/4%20Palestinian%20Authority.svg" alt="Palestinian Authority"></div>
+      <div class="client-card"><img src="assets/clients/5%20PCBS.svg" alt="PCBS"></div>
+      <div class="client-card"><img src="assets/clients/6%20Ministry%20of%20Telecommunications%20%26%20Digital%20Economy.svg" alt="MTIT"></div>
+      <div class="client-card" style="overflow:hidden"><img src="assets/clients/MTIT%20New.avif" alt="MTIT" style="transform:scale(1.47);transform-origin:center" width="500" height="300" loading="lazy"></div>
+      <div class="client-card" style="overflow:hidden"><img src="assets/clients/PMA%20Final%20.jpg" alt="PMA" style="transform:scale(1.27);transform-origin:center" width="640" height="360" loading="lazy"></div>
+      <div class="client-card"><img src="assets/clients/7%20PMA.svg" alt="Palestine Monetary Authority"></div>
+      <!-- duplicates for seamless loop -->
+      <div class="client-card"><img src="assets/clients/1%20Paltel.svg" alt="Paltel"></div>
+      <div class="client-card" style="overflow:hidden"><img src="assets/clients/2%20Jawwal.svg" alt="Jawwal" style="transform:scale(1.1);transform-origin:center"></div>
+      <div class="client-card"><img src="assets/clients/3%20Reach.svg" alt="Reach"></div>
+      <div class="client-card"><img src="assets/clients/4%20Palestinian%20Authority.svg" alt="Palestinian Authority"></div>
+      <div class="client-card"><img src="assets/clients/5%20PCBS.svg" alt="PCBS"></div>
+      <div class="client-card"><img src="assets/clients/6%20Ministry%20of%20Telecommunications%20%26%20Digital%20Economy.svg" alt="MTIT"></div>
+      <div class="client-card" style="overflow:hidden"><img src="assets/clients/MTIT%20New.avif" alt="MTIT" style="transform:scale(1.47);transform-origin:center" width="500" height="300" loading="lazy"></div>
+      <div class="client-card" style="overflow:hidden"><img src="assets/clients/PMA%20Final%20.jpg" alt="PMA" style="transform:scale(1.27);transform-origin:center" width="640" height="360" loading="lazy"></div>
+      <div class="client-card"><img src="assets/clients/7%20PMA.svg" alt="Palestine Monetary Authority"></div>
+    </div>
+  </div>
+  <!-- Row 2 ← scrolls right -->
+  <div class="marquee-wrapper">
+    <div class="clients-track reverse">
+      <div class="client-card"><img src="assets/clients/8%20World%20Bank.svg" alt="World Bank"></div>
+      <div class="client-card"><img src="assets/clients/9%20Bank%20of%20Palestine.svg" alt="Bank of Palestine"></div>
+      <div class="client-card"><img src="assets/clients/12%20AlQuds%20Pharma.svg" alt="AlQuds Pharma"></div>
+      <div class="client-card"><img src="assets/clients/13%20GIZ.svg" alt="GIZ"></div>
+      <div class="client-card"><img src="assets/clients/14%20Munib%20%26%20Angela%20Masri%20Logo.svg" alt="Masri Foundation"></div>
+      <div class="client-card"><img src="assets/clients/15%20Upliftt.svg" alt="Upliftt"></div>
+      <div class="client-card"><img src="assets/clients/Playgeko%20logo.svg" alt="Playgeko"></div>
+      <div class="client-card" style="overflow:hidden"><img src="assets/clients/Playsonic%20Logo.jpg" alt="Playsonic" style="transform:scale(1.4);transform-origin:center" width="640" height="360" loading="lazy"></div>
+      <div class="client-card"><img src="assets/clients/16.%20BK%20Plus%20Europe.png" alt="BK Plus Europe" style="transform:scale(0.75);transform-origin:center" width="330" height="240" loading="lazy"></div>
+      <!-- duplicates for seamless loop -->
+      <div class="client-card"><img src="assets/clients/8%20World%20Bank.svg" alt="World Bank"></div>
+      <div class="client-card"><img src="assets/clients/9%20Bank%20of%20Palestine.svg" alt="Bank of Palestine"></div>
+      <div class="client-card"><img src="assets/clients/12%20AlQuds%20Pharma.svg" alt="AlQuds Pharma"></div>
+      <div class="client-card"><img src="assets/clients/13%20GIZ.svg" alt="GIZ"></div>
+      <div class="client-card"><img src="assets/clients/14%20Munib%20%26%20Angela%20Masri%20Logo.svg" alt="Masri Foundation"></div>
+      <div class="client-card"><img src="assets/clients/15%20Upliftt.svg" alt="Upliftt"></div>
+      <div class="client-card"><img src="assets/clients/Playgeko%20logo.svg" alt="Playgeko"></div>
+      <div class="client-card" style="overflow:hidden"><img src="assets/clients/Playsonic%20Logo.jpg" alt="Playsonic" style="transform:scale(1.4);transform-origin:center" width="640" height="360" loading="lazy"></div>
+      <div class="client-card"><img src="assets/clients/16.%20BK%20Plus%20Europe.png" alt="BK Plus Europe" style="transform:scale(0.75);transform-origin:center" width="330" height="240" loading="lazy"></div>
+    </div>
   </div>
 </div>
 <section class="section-pad" style="background:var(--pearl);">
