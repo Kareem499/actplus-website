@@ -1,0 +1,29 @@
+# Ramlatech
+
+> Boutique software agency rooted in Ramla, Palestine — delivering web, mobile, and AI-powered solutions to clients across the Levant, GCC, USA, and Canada.
+
+Ramlatech is a Palestinian software house founded under ACT Plus Digital Solutions. We build custom software products with a focus on quality, speed, and long-term partnerships. Our team serves clients in Palestine, Jordan, Iraq, UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman, the United States, and Canada.
+
+## Services
+
+- Custom Web Development (React, Next.js, Node.js, PHP)
+- Mobile App Development (iOS, Android, React Native)
+- AI & Automation (chatbots, workflow automation, LLM integrations)
+- Cybersecurity (audits, penetration testing, secure architecture)
+- UI/UX Design (product design, design systems, prototyping)
+- Digital Transformation consulting
+
+## Pages
+
+- [Home](https://ramlatech.com/): Overview, services summary, client logos, and call to action
+- [About](https://ramlatech.com/about.html): Our story, mission, values, and team
+- [Services](https://ramlatech.com/services.html): Full service catalog with details
+- [Blog](https://ramlatech.com/blog.html): Practical guides on software, AI, and product development
+- [Contact](https://ramlatech.com/contact.html): Get in touch or request a quote
+
+## Contact
+
+- Email: hello@ramlatech.com
+- LinkedIn: https://www.linkedin.com/company/ramlatech
+- X (Twitter): https://x.com/ramlatech
+- Instagram: https://www.instagram.com/ramlatech

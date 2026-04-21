@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blog — Technology Insights from Ramlatech | Software, AI & Digital Transformation</title>
+<meta name="description" content="Practical guides on software development, AI automation, and building great products — from the team at Ramlatech, a boutique software agency rooted in Palestine." />
+<meta name="keywords" content="software development blog, AI automation guide, MVP guide, boutique software agency blog, technology insights Palestine" />
+<meta name="author" content="Ramlatech" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://ramlatech.com/blog.html" />
+<link rel="alternate" hreflang="en" href="https://ramlatech.com/blog.html" />
+<link rel="alternate" hreflang="ar" href="https://ramlatech.com/blog.html?lang=ar" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ramlatech.com/blog.html" />
+<meta property="og:title" content="Blog — Technology Insights from Ramlatech" />
+<meta property="og:description" content="Practical guides on software development, AI automation, and building great products — from the team at Ramlatech." />
+<meta property="og:image" content="https://ramlatech.com/assets/logo-navy.png" />
+<meta property="og:site_name" content="Ramlatech" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@ramlatech" />
+<meta name="twitter:title" content="Blog — Technology Insights from Ramlatech" />
+<meta name="twitter:description" content="Practical guides on software, AI, and building great products from the team at Ramlatech." />
+<meta name="twitter:image" content="https://ramlatech.com/assets/logo-navy.png" />
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KXS97MYKLJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KXS97MYKLJ');
+</script>
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "url": "https://ramlatech.com/blog.html",
+  "name": "Ramlatech Blog",
+  "description": "Practical guides on software development, AI automation, and building great products — from the team at Ramlatech.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ramlatech",
+    "url": "https://ramlatech.com",
+    "logo": "https://ramlatech.com/assets/logo-navy.png"
+  }
+}
+</script>
+<link rel="icon" type="image/png" href="assets/mark-navy.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Cairo:wght@400;500;600;700&display=swap" />
+<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+<link rel="dns-prefetch" href="https://groot.mailerlite.com" />
+<link rel="preload" href="main.css" as="style" />
+<link rel="stylesheet" href="main.css" />
+<style>
+.page-hero { background: linear-gradient(150deg, #0a1c33 0%, #0E1F38 60%, #0d2840 100%); padding: 11rem 0 7rem; position: relative; overflow: hidden; }
+.page-hero-bg { position: absolute; inset: 0; background-image: radial-gradient(circle at 70% 50%, rgba(196,136,43,0.07) 0%, transparent 55%), radial-gradient(circle at 20% 80%, rgba(11,138,138,0.08) 0%, transparent 45%); pointer-events: none; }
+.page-hero-dots { position: absolute; top: 60px; right: 5%; width: 280px; height: 280px; background-image: radial-gradient(circle, rgba(255,255,255,0.15) 1.5px, transparent 1.5px); background-size: 26px 26px; pointer-events: none; }
+.eyebrow { font-family: var(--font-display); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.6rem; }
+.eyebrow::before { content: ''; width: 28px; height: 2px; background: var(--gold); }
+.page-hero h1 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.25rem); font-weight: 700; color: var(--pearl); letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1.25rem; max-width: 700px; }
+.page-hero h1 span { color: var(--gold); }
+.page-hero p { font-size: 1.1rem; color: rgba(250,248,244,0.7); max-width: 520px; line-height: 1.75; }
+
+/* Featured post */
+.featured-card { display: grid; grid-template-columns: 1fr 1.3fr; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 48px rgba(14,31,56,0.14); }
+.featured-thumb { background: var(--navy); display: flex; align-items: center; justify-content: center; padding: 3rem; min-height: 340px; position: relative; overflow: hidden; }
+.featured-thumb::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 30% 70%, rgba(11,138,138,0.15) 0%, transparent 60%), radial-gradient(circle at 80% 20%, rgba(196,136,43,0.1) 0%, transparent 50%); }
+.featured-thumb img { height: 100px; width: auto; opacity: 0.18; position: relative; z-index: 1; }
+.featured-body { background: var(--white); padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
+.blog-tag { display: inline-flex; align-items: center; font-family: var(--font-display); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.25rem 0.75rem; border-radius: 100px; margin-bottom: 1.25rem; }
+.blog-tag.teal { background: rgba(11,138,138,0.1); color: var(--teal); }
+.blog-tag.gold { background: rgba(196,136,43,0.1); color: var(--gold); }
+.blog-tag.navy { background: rgba(14,31,56,0.08); color: var(--navy); }
+.blog-tag.olive { background: rgba(75,122,69,0.1); color: var(--olive); }
+.featured-body h2 { font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 700; color: var(--navy); letter-spacing: -0.025em; line-height: 1.2; margin-bottom: 1rem; }
+.featured-body p { font-size: 0.98rem; color: var(--stone); line-height: 1.75; margin-bottom: 1.5rem; }
+.blog-meta { font-family: var(--font-mono); font-size: 0.78rem; color: var(--stone); margin-bottom: 1.5rem; }
+.blog-link { font-family: var(--font-display); font-size: 0.9rem; font-weight: 600; color: var(--teal); letter-spacing: 0.02em; transition: gap 0.2s; display: inline-flex; align-items: center; gap: 0.4rem; }
+.blog-link:hover { color: var(--navy); gap: 0.7rem; }
+
+/* Post grid */
+.post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
+.post-card { background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 24px rgba(14,31,56,0.07); transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease); }
+.post-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(14,31,56,0.13); }
+.post-thumb { height: 160px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.post-thumb.teal { background: linear-gradient(135deg, #0B8A8A, #097474); }
+.post-thumb.gold { background: linear-gradient(135deg, #C4882B, #a97323); }
+.post-thumb.navy { background: linear-gradient(135deg, #0E1F38, #0a1428); }
+.post-thumb svg { opacity: 0.2; }
+.post-body { padding: 1.5rem; }
+.post-body h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--navy); line-height: 1.35; margin: 0.75rem 0 0.5rem; }
+.post-date { font-family: var(--font-mono); font-size: 0.75rem; color: var(--stone); }
+.coming-soon-badge { display: inline-flex; align-items: center; gap: 0.4rem; font-family: var(--font-display); font-size: 0.72rem; font-weight: 500; color: rgba(107,114,128,0.8); margin-top: 1rem; }
+.coming-soon-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--stone); opacity: 0.5; }
+
+@media (max-width: 900px) { .featured-card { grid-template-columns: 1fr; } .featured-thumb { min-height: 200px; } .post-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .post-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo"><img src="assets/logo-nav.png" alt="Ramlatech boutique software agency logo" width="499" height="128" /></a>
+  <div class="nav-links">
+    <a href="index.html" data-i18n="nav.home">Home</a>
+    <a href="about.html" data-i18n="nav.about">About</a>
+    <a href="manifesto.html">Manifesto</a>
+    <a href="services.html" data-i18n="nav.services">Services</a>
+    <a href="blog.html" data-i18n="nav.blog">Blog</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    <a href="contact.html#book" class="nav-cta" data-i18n="nav.book">Book a Call</a>
+  </div>
+  <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">العربية</button>
+  <div class="nav-burger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- Hero -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-dots"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="eyebrow anim-up" data-i18n="blg.eyebrow">Insights & Resources</div>
+    <h1 class="anim-up anim-up-d1" data-i18n-html="blg.h1">Technology insights from the<br/><span>heart of Palestine</span></h1>
+    <p class="anim-up anim-up-d2" data-i18n="blg.p">Practical guides on software, AI, and building great products.</p>
+  </div>
+</section>
+
+<!-- Featured Post -->
+<section class="section-pad" style="background:var(--pearl);">
+  <div class="container">
+    <div class="section-label" style="margin-bottom:2rem;" data-i18n="blg.feat.lbl">Featured Article</div>
+    <div class="featured-card reveal">
+      <div class="featured-thumb">
+        <img src="assets/mark-white.png" alt="Ramlatech software agency mark" width="128" height="128" loading="lazy" />
+      </div>
+      <div class="featured-body">
+        <span class="blog-tag teal" data-i18n="blg.feat.tag">Startups</span>
+        <h2 data-i18n="blg.feat.h2">What is an MVP? How to Build One and Get to Market Fast</h2>
+        <p data-i18n="blg.feat.p">Every great product started as an idea — but how do you get from idea to market without wasting months and money? This is the founder's guide to the MVP.</p>
+        <div class="blog-meta" data-i18n="blg.feat.meta">Apr 14, 2026 · 8 min read</div>
+        <a href="#" class="blog-link" data-i18n="blg.feat.lnk">Read article →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Post Grid -->
+<section class="section-pad" style="background:var(--white);">
+  <div class="container">
+    <div class="section-label" style="margin-bottom:2rem;" data-i18n="blg.more.lbl">More Articles</div>
+    <div class="post-grid">
+
+      <div class="post-card reveal reveal-d1">
+        <div class="post-thumb teal">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="post-body">
+          <span class="blog-tag teal" data-i18n="blg.p1.tag">Agencies</span>
+          <h3 data-i18n="blg.p1.h3">How to choose a software agency — 10 questions to ask before you sign</h3>
+          <div class="coming-soon-badge" data-i18n="blg.p1.cs">Coming Soon</div>
+        </div>
+      </div>
+
+      <div class="post-card reveal reveal-d2">
+        <div class="post-thumb gold">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </div>
+        <div class="post-body">
+          <span class="blog-tag gold" data-i18n="blg.p2.tag">AI</span>
+          <h3 data-i18n="blg.p2.h3">AI automation for SMEs — where to start and what to expect</h3>
+          <div class="coming-soon-badge" data-i18n="blg.p2.cs">Coming Soon</div>
+        </div>
+      </div>
+
+      <div class="post-card reveal reveal-d3">
+        <div class="post-thumb navy">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div class="post-body">
+          <span class="blog-tag navy" data-i18n="blg.p3.tag">Budgeting</span>
+          <h3 data-i18n="blg.p3.h3">How much does custom software development cost in 2026?</h3>
+          <div class="coming-soon-badge" data-i18n="blg.p3.cs">Coming Soon</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter Band -->
+<section class="newsletter-band" aria-label="Newsletter signup">
+  <div class="container">
+    <div class="newsletter-grid">
+      <div class="newsletter-left">
+        <div class="newsletter-eyebrow" data-i18n="nl.eyebrow">STAY ROOTED</div>
+        <h2 class="newsletter-h2" data-i18n-html="nl.h2">Insights from <span>Ramla</span> to your inbox</h2>
+        <p class="newsletter-p" data-i18n="nl.p">One thoughtful email a month on digital transformation, AI, and software built with purpose. No noise, no fluff.</p>
+      </div>
+      <div class="newsletter-right">
+        <form class="newsletter-form" data-newsletter="band" action="https://assets.mailerlite.com/jsonp/2267517/forms/184727574659729402/subscribe" method="POST">
+          <input type="hidden" name="ml-submit" value="1">
+          <input type="hidden" name="anticsrf" value="true">
+          <label class="sr-only" for="nl-band-email-blog">Email</label>
+          <div class="newsletter-input-wrap">
+            <input type="email" id="nl-band-email-blog" name="fields[email]" required placeholder="you@company.com" aria-label="Email" class="newsletter-input" autocomplete="email" data-i18n-ph="footer.nl_ph">
+            <button type="submit" class="newsletter-btn" data-i18n="nl.btn">Subscribe</button>
+          </div>
+          <p class="newsletter-helper" data-i18n="nl.helper">Confirm via email. Unsubscribe anytime.</p>
+        </form>
+        <div class="newsletter-success" data-i18n="nl.success">Thanks — check your inbox to confirm.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo-nav.png" alt="Ramlatech boutique software agency logo" style="height:64px;width:auto;" width="499" height="128" loading="lazy" />
+        <p data-i18n="footer.tagline">Rooted in Heritage. Driven by Innovation. A software agency built from Ramla, Palestine — delivering transformative technology to the world.</p>
+        <form class="footer-nl-form" data-newsletter="footer" action="https://assets.mailerlite.com/jsonp/2267517/forms/184727574659729402/subscribe" method="POST">
+          <input type="hidden" name="ml-submit" value="1">
+          <input type="hidden" name="anticsrf" value="true">
+          <label class="sr-only" for="nl-footer-email-blog">Email</label>
+          <input type="email" id="nl-footer-email-blog" name="fields[email]" required placeholder="Newsletter email" aria-label="Email" class="footer-nl-input" autocomplete="email" data-i18n-ph="footer.nl_ph">
+          <button type="submit" class="footer-nl-btn">→</button>
+        </form>
+        <div class="footer-nl-success" data-i18n="nl.success">Thanks — check your inbox to confirm.</div>
+        <div class="footer-social" style="margin-top:1.25rem;">
+  <a href="https://www.linkedin.com/company/ramlatech" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+  </a>
+  <a href="https://x.com/ramlatech" target="_blank" rel="noopener noreferrer" title="X">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a href="https://www.instagram.com/ramlatech" target="_blank" rel="noopener noreferrer" title="Instagram">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+  </a>
+</div>
+      </div>
+      <div class="footer-col"><h4 data-i18n="footer.company">Company</h4><a href="about.html" data-i18n="footer.about_us">About Us</a><a href="manifesto.html">Manifesto</a><a href="about.html#values" data-i18n="footer.our_values">Our Values</a><a href="about.html#story" data-i18n="footer.our_story">Our Story</a><a href="contact.html" data-i18n="footer.f_contact">Contact</a></div>
+      <div class="footer-col"><h4 data-i18n="footer.services">Services</h4><a href="services.html#mobile" data-i18n="footer.mobile_dev">Mobile Dev</a><a href="services.html#web" data-i18n="footer.web_dev">Web Dev</a><a href="services.html#ai" data-i18n="footer.ai">AI & Automation</a><a href="services.html#security" data-i18n="footer.security">Cybersecurity</a><a href="services.html" data-i18n="footer.all_svcs">All Services</a></div>
+      <div class="footer-col"><h4 data-i18n="footer.get_started">Get Started</h4><a href="contact.html#book" data-i18n="footer.book_cons">Book a Consultation</a><a href="contact.html#rfp" data-i18n="footer.submit_rfp">Submit an RFP</a><a href="contact.html" data-i18n="footer.contact_us">Contact Us</a><a href="mailto:hello@ramlatech.com">hello@ramlatech.com</a></div>
+    </div>
+    <div class="act-plus-bar">
+      <img src="assets/assetsact-plus-logo-transparent.svg" alt="ACT Plus Digital Solutions" class="act-plus-logo-img" />
+      <span class="act-plus-text">A specialized division of <strong>ACT Plus Digital Solutions</strong></span>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.copyright">© 2026 Ramlatech. All rights reserved.</span>
+      <span style="font-family:var(--font-mono);font-size:0.8rem;color:rgba(255,255,255,0.3);" data-i18n="footer.mono">ramlatech.com · Software Agency · Est. Palestine</span>
+    </div>
+  </div>
+</footer>
+<script src="main.js" defer></script>
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?v95037e5bac78f29ed026832ca21a7c7b" type="text/javascript" defer></script>
+<script src="lang.js" defer></script>
+</body>
+</html>

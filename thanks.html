@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Thank You — Ramlatech</title>
+<link rel="canonical" href="https://ramlatech.com/thanks.html" />
+<link rel="alternate" hreflang="en" href="https://ramlatech.com/thanks.html" />
+<link rel="alternate" hreflang="ar" href="https://ramlatech.com/thanks.html?lang=ar" />
+<link rel="icon" type="image/png" href="assets/mark-navy.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Cairo:wght@400;500;600;700&display=swap" />
+<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+<link rel="preload" href="main.css" as="style" />
+<link rel="stylesheet" href="main.css" />
+<style>
+.thanks-hero {
+  min-height: 100vh;
+  background: linear-gradient(155deg, #0a1c33 0%, #0E1F38 60%, #0b3a3a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.thanks-card {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.25);
+}
+.check-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(11,138,138,0.1);
+  border: 2px solid var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.75rem;
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+@keyframes popIn {
+  from { transform: scale(0); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+.thanks-card h1 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+}
+.thanks-card p {
+  font-size: 0.95rem;
+  color: var(--stone);
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+}
+.info-box {
+  background: rgba(11,138,138,0.06);
+  border: 1px solid rgba(11,138,138,0.15);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+  text-align: left;
+}
+.info-box svg { flex-shrink: 0; }
+.info-box p {
+  font-size: 0.85rem;
+  color: var(--stone);
+  margin: 0;
+  line-height: 1.5;
+}
+.info-box strong { color: var(--navy); }
+.btn-home {
+  display: block;
+  width: 100%;
+  background: var(--teal);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: background 0.2s;
+}
+.btn-home:hover { background: #097474; }
+.spam-note {
+  font-size: 0.8rem;
+  color: var(--stone);
+  margin: 0;
+}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KXS97MYKLJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KXS97MYKLJ');
+</script>
+</head>
+<body>
+<section class="thanks-hero">
+  <div class="thanks-card">
+    <div class="check-circle">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0B8A8A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+    </div>
+    <h1 data-i18n="thx.h1">Your submission is successful!</h1>
+    <p data-i18n-html="thx.p">We have received your message and will get back to you within <strong style="color:var(--navy);">1 business day.</strong></p>
+    <div class="info-box">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B8A8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <p data-i18n-html="thx.info">We've sent a confirmation to your email. In the meantime, reach us at <strong>hello@ramlatech.com</strong></p>
+    </div>
+    <a href="index.html" class="btn-home" data-i18n="thx.btn">Back to Ramlatech →</a>
+    <p class="spam-note" data-i18n="thx.spam">Don't see our email? Check your spam folder.</p>
+  </div>
+</section>
+<script src="lang.js" defer></script>
+</body>
+</html>
