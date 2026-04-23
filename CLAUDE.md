@@ -421,3 +421,115 @@ The favicon (browser tab icon) is set via:
 This also appears next to the URL in Google search results.  
 File: `assets/mark-navy.png` — the navy ACT Plus mark.  
 Ensure this tag is present in the `<head>` of every page.
+
+---
+
+## SEO
+
+### What's In Place (as of April 2026)
+
+| Element | Status |
+|---|---|
+| Meta title + description | All 10 pages (EN + AR) |
+| Meta keywords | All 10 pages |
+| Open Graph + Twitter Card | All EN pages |
+| Canonical URLs | All EN pages |
+| hreflang EN ↔ AR | All page pairs |
+| sitemap.xml | All 10 pages (EN + AR) |
+| robots.txt | All crawlers allowed, incl. AI bots |
+| Structured data | All 5 EN pages (see below) |
+| Google Analytics (GTM) | `G-CXV0Z0S9R3` |
+| Google Search Console | Sitemap submitted — `https://actplusds.com/sitemap.xml` |
+
+### Structured Data Per Page
+
+| Page | Schema Types |
+|---|---|
+| `index.html` | `Organization`, `ProfessionalService`, `WebSite`, `WebPage` — `@graph` with geo coords, areaServed, knowsAbout |
+| `services.html` | `WebPage` + 6 individual `Service` schemas (Digital Transformation, Custom Software, Cybersecurity/SOC, CTO on Demand, AI Automation, Staff Augmentation) |
+| `contact.html` | `ContactPage`, `Organization`, `FAQPage` (6 Q&As — can appear as rich results in Google) |
+| `about.html` | `AboutPage`, `Organization` with foundingDate, numberOfEmployees, BreadcrumbList |
+| `partners.html` | `WebPage`, `Organization`, `BreadcrumbList` |
+
+### Target Keywords (High Priority)
+
+These are low-competition, high-intent terms the site is optimised for:
+
+| Keyword | Page | Why |
+|---|---|---|
+| `IT consulting company Palestine` | index, about | Near-zero competition, should rank #1 |
+| `software development company Ramallah` | index, services | Local, easy win |
+| `SOC as a service MENA` | index, services | High value, few competitors |
+| `CTO on demand MENA` | services | Niche, almost no competition |
+| `digital transformation company Palestine` | about | Low competition |
+| `digital transformation Jordan` | index | Medium competition, good intent |
+
+### When Adding a New Page
+
+Every new page needs these tags in `<head>`:
+
+```html
+<title>Page Title — ACT Plus Digital Solutions</title>
+<meta name="description" content="150–160 character description with primary keyword." />
+<meta name="keywords" content="keyword 1, keyword 2, keyword 3" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://actplusds.com/page.html" />
+<link rel="alternate" hreflang="en" href="https://actplusds.com/page.html" />
+<link rel="alternate" hreflang="ar" href="https://actplusds.com/ar/page.html" />
+<link rel="icon" type="image/png" href="assets/mark-navy.png" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://actplusds.com/page.html" />
+<meta property="og:title" content="Page Title — ACT Plus Digital Solutions" />
+<meta property="og:description" content="Same as meta description." />
+<meta property="og:image" content="https://actplusds.com/assets/act-plus-logo.png" />
+<meta property="og:site_name" content="ACT Plus Digital Solutions" />
+
+<!-- Structured data (minimum) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://actplusds.com/page.html",
+  "name": "Page Title",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://actplusds.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Page Name", "item": "https://actplusds.com/page.html" }
+    ]
+  }
+}
+</script>
+```
+
+Also add the new page to `sitemap.xml`.
+
+### Updating the Sitemap
+
+File: `sitemap.xml` at project root. Update `<lastmod>` when content changes significantly.
+
+```xml
+<url>
+  <loc>https://actplusds.com/page.html</loc>
+  <lastmod>YYYY-MM-DD</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+```
+
+After pushing, go to Google Search Console → Sitemaps → resubmit if new pages were added.
+
+### Validating Structured Data
+
+Use Google's Rich Results Test: https://search.google.com/test/rich-results  
+Enter any page URL to check schema validity and rich result eligibility.
+
+### Backlink Targets (Ongoing)
+
+Priority sources for inbound links:
+- LinkedIn company page — `https://linkedin.com/company/act-plus-digital-solutions` → set website field
+- Clutch.co — free IT company profile, high domain authority
+- GoodFirms — free listing for software/IT companies
+- Client partner directories (Zain, GIZ, World Bank programme pages)
