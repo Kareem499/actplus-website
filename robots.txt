@@ -29,4 +29,4 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-Sitemap: https://ramlatech.com/sitemap.xml
+Sitemap: https://actplusds.com/sitemap.xml
