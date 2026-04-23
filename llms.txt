@@ -1,29 +1,42 @@
-# Ramlatech
+# ACT Plus Digital Solutions
 
-> Boutique software agency rooted in Ramla, Palestine — delivering web, mobile, and AI-powered solutions to clients across the Levant, GCC, USA, and Canada.
+> Enterprise digital transformation partner headquartered in Ramallah, Palestine — delivering IT strategy, engineering, cybersecurity and managed services across MENA.
 
-Ramlatech is a Palestinian software house founded under ACT Plus Digital Solutions. We build custom software products with a focus on quality, speed, and long-term partnerships. Our team serves clients in Palestine, Jordan, Iraq, UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman, the United States, and Canada.
+ACT Plus Digital Solutions is an enterprise IT consulting and digital transformation company. We operate as a single, accountable delivery partner across strategy, software engineering, cybersecurity, and specialist services — serving leading organisations in Palestine, Jordan, Iraq, UAE, Saudi Arabia, Egypt and the wider MENA region.
 
 ## Services
 
-- Custom Web Development (React, Next.js, Node.js, PHP)
-- Mobile App Development (iOS, Android, React Native)
-- AI & Automation (chatbots, workflow automation, LLM integrations)
-- Cybersecurity (audits, penetration testing, secure architecture)
-- UI/UX Design (product design, design systems, prototyping)
-- Digital Transformation consulting
+- Digital Transformation Strategy
+- Custom Software & Platform Engineering
+- Cybersecurity & SOC (Security Operations Centre)
+- Managed IT Services
+- Data & Analytics
+- Cloud Infrastructure & DevOps
+- UI/UX Design & Product Development
+
+## Key Clients
+
+Paltel, Jawwal, Palestine Monetary Authority, Bank of Palestine, The World Bank, PCBS, Ministry of Telecommunications & Digital Economy, AlQuds Pharmaceuticals, GIZ, Munib & Angela Masri Foundation, Upliftt, BK Plus Europe, Reach.
 
 ## Pages
 
-- [Home](https://ramlatech.com/): Overview, services summary, client logos, and call to action
-- [About](https://ramlatech.com/about.html): Our story, mission, values, and team
-- [Services](https://ramlatech.com/services.html): Full service catalog with details
-- [Blog](https://ramlatech.com/blog.html): Practical guides on software, AI, and product development
-- [Contact](https://ramlatech.com/contact.html): Get in touch or request a quote
+- [Home](https://actplusds.com/): Overview, services, client logos, and call to action
+- [Services](https://actplusds.com/services.html): Full service catalogue with details
+- [About](https://actplusds.com/about.html): Our story, mission, values and team
+- [Partners](https://actplusds.com/partners.html): Partner and vendor programme
+- [Blog](https://actplusds.com/blog.html): Insights on digital transformation and enterprise IT
+- [Contact](https://actplusds.com/contact.html): Get in touch or book a consultation
+
+## Offices
+
+- Ramallah, Palestine (HQ)
+- Gaza, Palestine
+- Amman, Jordan
+- Baghdad & Erbil, Iraq
+- Dubai, UAE
+- Toronto, Canada
 
 ## Contact
 
-- Email: hello@ramlatech.com
-- LinkedIn: https://www.linkedin.com/company/ramlatech
-- X (Twitter): https://x.com/ramlatech
-- Instagram: https://www.instagram.com/ramlatech
+- Email: info@actplusds.com
+- Website: https://actplusds.com
