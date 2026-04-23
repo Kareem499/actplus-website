@@ -298,19 +298,20 @@ section { padding: 140px var(--gutter); }
 .proof { padding: 84px 0; background: var(--bg); border-bottom: 1px solid var(--line); overflow: hidden; }
 .proof-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 300px 1fr; gap: 72px; align-items: center; padding-left: var(--gutter); }
 .proof-label { font-size: 13px; color: var(--ink-3); line-height: 1.55; }
-.proof-track-wrap { position: relative; overflow: hidden; padding-right: var(--gutter); -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
-.proof-track { display: flex; gap: 0; align-items: center; width: max-content; animation: proofScroll 25s linear infinite; }
+.proof-track-wrap { position: relative; overflow: hidden; padding-right: var(--gutter); -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent); }
+.proof-track { display: flex; gap: 0; align-items: center; width: max-content; animation: proofScroll 50s linear infinite; }
 .proof-track:hover { animation-play-state: paused; }
 .proof-slot {
   flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
-  padding: 0 28px; height: 120px;
+  width: 220px; height: 160px;
+  border-right: 1px solid var(--line);
 }
 .proof-slot img {
-  max-height: 80px; max-width: 220px;
+  max-height: 100px; max-width: 160px;
   width: auto; object-fit: contain;
-  filter: grayscale(1) opacity(0.55);
-  transition: filter 300ms;
+  filter: grayscale(1) opacity(0.72);
+  transition: filter 350ms ease;
 }
 .proof-slot:hover img { filter: grayscale(0) opacity(1); }
 @keyframes proofScroll {
@@ -319,6 +320,71 @@ section { padding: 140px var(--gutter); }
 }
 @media (prefers-reduced-motion: reduce) {
   .proof-track { animation: none; }
+}
+
+/* ============ TECH TRENDY CSR ============ */
+.tt-csr {
+  background: var(--deep-sea);
+  padding: 120px var(--gutter);
+  position: relative;
+  overflow: hidden;
+}
+.tt-csr::before {
+  content: ''; position: absolute; bottom: -160px; right: -100px;
+  width: 600px; height: 600px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(111,208,246,0.08), transparent 70%);
+  pointer-events: none;
+}
+.tt-inner {
+  max-width: var(--max-w); margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 480px; gap: 100px; align-items: center;
+}
+.tt-eyebrow { color: var(--innovate); }
+.tt-eyebrow::before { background: var(--innovate); }
+.tt-headline {
+  font-family: var(--font-display); font-weight: 300;
+  font-size: clamp(32px, 3.6vw, 58px); line-height: 1.15;
+  letter-spacing: -0.02em; color: #fff; margin-top: 28px;
+}
+.tt-headline strong { font-weight: 600; color: var(--innovate); }
+.tt-body {
+  margin-top: 24px; font-size: 16px; line-height: 1.7;
+  color: rgba(255,255,255,0.72); max-width: 580px;
+}
+.tt-body + .tt-body { margin-top: 12px; color: rgba(255,255,255,0.9); font-weight: 500; font-size: 17px; }
+.tt-actions { margin-top: 40px; }
+.tt-btn { background: #fff; color: var(--deep-sea); border-color: #fff; }
+.tt-btn:hover { background: var(--innovate); border-color: var(--innovate); color: var(--deep-sea); }
+.tt-sig {
+  margin-top: 40px; padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.5;
+}
+.tt-sig strong { color: rgba(255,255,255,0.75); font-weight: 600; }
+.tt-right { display: flex; flex-direction: column; gap: 40px; }
+.tt-logo-wrap {
+  background: #fff; border-radius: 16px;
+  padding: 36px 40px; display: flex; align-items: center; justify-content: center;
+}
+.tt-logo { max-height: 80px; width: auto; display: block; }
+.tt-stats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden;
+}
+.tt-stat {
+  background: rgba(255,255,255,0.04);
+  padding: 24px 20px; display: flex; flex-direction: column; gap: 6px;
+}
+.tt-stat-n { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--innovate); letter-spacing: -0.02em; line-height: 1; }
+.tt-stat-l { font-size: 12px; color: rgba(255,255,255,0.5); letter-spacing: 0.06em; text-transform: uppercase; }
+@media (max-width: 1080px) {
+  .tt-inner { grid-template-columns: 1fr; gap: 56px; }
+  .tt-right { flex-direction: row; align-items: flex-start; }
+  .tt-logo-wrap { flex: 0 0 auto; }
+  .tt-stats { flex: 1; }
+}
+@media (max-width: 640px) {
+  .tt-right { flex-direction: column; }
 }
 
 /* ============ INTRO ============ */
@@ -641,34 +707,46 @@ section { padding: 140px var(--gutter); }
     <div class="proof-label">Trusted by regional leaders across telecoms, government, banking and enterprise.</div>
     <div class="proof-track-wrap">
       <div class="proof-track" id="proofTrack">
-        <div class="proof-slot"><img src="assets/clients/1%20Paltel.svg" alt="Paltel"></div>
-        <div class="proof-slot"><img src="assets/clients/2%20Jawwal.svg" alt="Jawwal"></div>
-        <div class="proof-slot"><img src="assets/clients/3%20Reach.svg" alt="Reach"></div>
-        <div class="proof-slot"><img src="assets/clients/4%20Palestinian%20Authority.svg" alt="State of Palestine"></div>
-        <div class="proof-slot"><img src="assets/clients/5%20PCBS.svg" alt="PCBS"></div>
-        <div class="proof-slot"><img src="assets/clients/6%20Ministry%20of%20Telecommunications%20%26%20Digital%20Economy.svg" alt="Ministry of Telecom & Digital Economy"></div>
-        <div class="proof-slot"><img src="assets/clients/7%20PMA.svg" alt="Palestine Monetary Authority"></div>
-        <div class="proof-slot"><img src="assets/clients/8%20The%20World%20Bank.svg" alt="The World Bank"></div>
-        <div class="proof-slot"><img src="assets/clients/9%20Bank%20of%20Palestine.svg" alt="Bank of Palestine"></div>
-        <div class="proof-slot"><img src="assets/clients/12%20AlQuds%20Pharma.svg" alt="AlQuds Pharmaceuticals"></div>
-        <div class="proof-slot"><img src="assets/clients/13%20GIZ.svg" alt="GIZ"></div>
-        <div class="proof-slot"><img src="assets/clients/14%20Munib%20%26%20Angela%20Masri%20Logo.svg" alt="Munib & Angela Masri Foundation"></div>
-        <div class="proof-slot"><img src="assets/clients/15%20Upliftt.svg" alt="Upliftt"></div>
+        <div class="proof-slot"><img src="assets/clients/1.%20Paltel.png" alt="Paltel"></div>
+        <div class="proof-slot"><img src="assets/clients/2.%20Jawwal.png" alt="Jawwal"></div>
+        <div class="proof-slot"><img src="assets/clients/3.%20Reach.png" alt="Reach"></div>
+        <div class="proof-slot"><img src="assets/clients/4.%20State%20of%20Palestine.png" alt="State of Palestine"></div>
+        <div class="proof-slot"><img src="assets/clients/5.%20Palestinian%20Central%20Bureau%20of%20Statistics.png" alt="PCBS"></div>
+        <div class="proof-slot"><img src="assets/clients/21.%20MTIT.png" alt="Ministry of Telecom & IT" style="transform:scale(1.3);"></div>
+        <div class="proof-slot"><img src="assets/clients/7.%20Palestine%20Monetary%20Authority.png" alt="Palestine Monetary Authority" style="transform:scale(1.3);"></div>
+        <div class="proof-slot"><img src="assets/clients/8.%20The%20World%20Bank.png" alt="The World Bank"></div>
+        <div class="proof-slot"><img src="assets/clients/9.%20Bank%20of%20Palestine.png" alt="Bank of Palestine"></div>
+        <div class="proof-slot"><img src="assets/clients/12.%20AlQuds%20Pharmaceuticals%20Group.png" alt="AlQuds Pharmaceuticals" style="transform:scale(1.15);"></div>
+        <div class="proof-slot"><img src="assets/clients/13.%20GIZ.png" alt="GIZ"></div>
+        <div class="proof-slot"><img src="assets/clients/14.%20Munib%20%26%20Angels%20Masri%20Foundation.png" alt="Munib & Angela Masri Foundation" style="transform:scale(1.2);"></div>
+
         <div class="proof-slot"><img src="assets/clients/16.%20BK%20Plus%20Europe.png" alt="BK Plus Europe"></div>
-        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/1%20Paltel.svg" alt=""></div>
-        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/2%20Jawwal.svg" alt=""></div>
-        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/3%20Reach.svg" alt=""></div>
-        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/4%20Palestinian%20Authority.svg" alt=""></div>
-        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/5%20PCBS.svg" alt=""></div>
-        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/6%20Ministry%20of%20Telecommunications%20%26%20Digital%20Economy.svg" alt=""></div>
-        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/7%20PMA.svg" alt=""></div>
-        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/8%20The%20World%20Bank.svg" alt=""></div>
-        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/9%20Bank%20of%20Palestine.svg" alt=""></div>
-        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/12%20AlQuds%20Pharma.svg" alt=""></div>
-        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/13%20GIZ.svg" alt=""></div>
-        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/14%20Munib%20%26%20Angela%20Masri%20Logo.svg" alt=""></div>
-        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/15%20Upliftt.svg" alt=""></div>
+        <div class="proof-slot"><img src="assets/clients/17.%20Zain-logo.png" alt="Zain"></div>
+        <div class="proof-slot"><img src="assets/clients/18.%20itisaluna.png" alt="Itisaluna" style="transform:scale(1.55);"></div>
+        <div class="proof-slot"><img src="assets/clients/19.%20Newroz.png" alt="Newroz Telecom" style="transform:scale(1.2);"></div>
+        <div class="proof-slot"><img src="assets/clients/20.%20Pharmacare.png" alt="Pharmacare PLC" style="transform:scale(1.74);"></div>
+        <div class="proof-slot"><img src="assets/clients/21.%20Sidata.png" alt="Sidata" style="transform:scale(1.35);"></div>
+        <div class="proof-slot"><img src="assets/clients/22.%20Tech%20Trendy.png" alt="Tech Trendy"></div>
+        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/1.%20Paltel.png" alt=""></div>
+        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/2.%20Jawwal.png" alt=""></div>
+        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/3.%20Reach.png" alt=""></div>
+        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/4.%20State%20of%20Palestine.png" alt=""></div>
+        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/5.%20Palestinian%20Central%20Bureau%20of%20Statistics.png" alt=""></div>
+        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/21.%20MTIT.png" alt=""></div>
+        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/7.%20Palestine%20Monetary%20Authority.png" alt=""></div>
+        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/8.%20The%20World%20Bank.png" alt=""></div>
+        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/9.%20Bank%20of%20Palestine.png" alt=""></div>
+        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/12.%20AlQuds%20Pharmaceuticals%20Group.png" alt=""></div>
+        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/13.%20GIZ.png" alt=""></div>
+        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/14.%20Munib%20%26%20Angels%20Masri%20Foundation.png" alt=""></div>
+
         <div class="proof-slot" aria-hidden="true"><img src="assets/clients/16.%20BK%20Plus%20Europe.png" alt=""></div>
+        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/17.%20Zain-logo.png" alt=""></div>
+        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/18.%20itisaluna.png" alt="" style="transform:scale(1.35);"></div>
+        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/19.%20Newroz.png" alt="" style="transform:scale(1.2);"></div>
+        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/20.%20Pharmacare.png" alt="" style="transform:scale(1.45);"></div>
+        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/21.%20Sidata.png" alt="" style="transform:scale(1.35);"></div>
+        <div class="proof-slot" aria-hidden="true"><img src="assets/clients/22.%20Tech%20Trendy.png" alt=""></div>
       </div>
     </div>
   </div>
@@ -1059,6 +1137,33 @@ section { padding: 140px var(--gutter); }
       We look at our customers as <em>partners</em> — building long-term relationships based on <em>trust, mutual respect, and collaboration.</em>
     </blockquote>
     <cite><strong>The Clientele Principle</strong>ACT Plus Digital Solutions</cite>
+  </div>
+</section>
+
+<!-- TECH TRENDY CSR -->
+<section class="tt-csr">
+  <div class="tt-inner">
+    <div class="tt-content">
+      <div class="eyebrow tt-eyebrow">Corporate Social Responsibility</div>
+      <h2 class="tt-headline">Technology as a<br><strong>force for good.</strong></h2>
+      <p class="tt-body">ACT Plus is proud to support Tech Trendy — a non-profit initiative empowering students and communities across the Middle East through inclusive technology education and free skills training. Founded during the COVID-19 pandemic, Tech Trendy has grown to serve communities in Lebanon, Jordan, Syria, Palestine, UAE, and Saudi Arabia, with a particular focus on Palestinian refugees.</p>
+      <p class="tt-body">Free membership. Real skills. Lasting impact.</p>
+      <div class="tt-actions">
+        <a href="https://techtrendy.org/" target="_blank" rel="noopener" class="btn btn-light tt-btn">Learn about Tech Trendy &rarr;</a>
+      </div>
+      <div class="tt-sig">A non-profit initiative founded by <strong>Bassem Al-Wazir</strong>, Chairman of ACT Plus Digital Solutions.</div>
+    </div>
+    <div class="tt-right">
+      <div class="tt-logo-wrap">
+        <img src="assets/clients/22.%20Tech%20Trendy.png" alt="Tech Trendy" class="tt-logo">
+      </div>
+      <div class="tt-stats">
+        <div class="tt-stat"><span class="tt-stat-n">2020</span><span class="tt-stat-l">Founded</span></div>
+        <div class="tt-stat"><span class="tt-stat-n">6</span><span class="tt-stat-l">Cities</span></div>
+        <div class="tt-stat"><span class="tt-stat-n">Free</span><span class="tt-stat-l">Membership</span></div>
+        <div class="tt-stat"><span class="tt-stat-n">Non-Profit</span><span class="tt-stat-l">Initiative</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
