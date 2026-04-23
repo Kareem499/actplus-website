@@ -332,6 +332,47 @@ section { padding: 120px var(--gutter); }
 .footer-brand p { font-size: 14px; margin-top: 24px; max-width: 340px; line-height: 1.7; color: rgba(255,255,255,0.65); }
 .footer-bottom { max-width: var(--max-w); margin: 32px auto 0; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: rgba(255,255,255,0.4); letter-spacing: 0.02em; }
 
+/* ===== PDF VIEWER ===== */
+.pdf-viewer {
+  border: 1px solid var(--line); border-radius: 4px; overflow: hidden;
+  background: var(--bg); box-shadow: 0 4px 24px rgba(0,58,85,0.07);
+}
+.pdf-toolbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 20px; background: var(--bg-2);
+  border-bottom: 1px solid var(--line); gap: 16px; flex-wrap: wrap;
+}
+.pdf-label {
+  font-size: 13px; font-weight: 600; color: var(--ink-2);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.pdf-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.pdf-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 12px; font-weight: 600; padding: 8px 14px;
+  border: 1px solid var(--line-2); border-radius: 2px;
+  color: var(--ink-2); background: var(--bg); cursor: pointer;
+  transition: all 200ms; white-space: nowrap; text-decoration: none;
+  font-family: var(--font-sans);
+}
+.pdf-btn:hover { color: var(--deep-sea); border-color: var(--deep-sea); }
+.pdf-btn-download { background: var(--deep-sea); color: #fff; border-color: var(--deep-sea); }
+.pdf-btn-download:hover { background: var(--midnight); border-color: var(--midnight); color: #fff; }
+.pdf-frame-wrap { height: 680px; overflow: hidden; position: relative; }
+.pdf-frame { width: 100%; height: 100%; border: none; display: block; }
+
+#pdf-viewer:fullscreen {
+  display: flex; flex-direction: column; background: #1a1a1a;
+  border-radius: 0; border: none;
+}
+#pdf-viewer:-webkit-full-screen {
+  display: flex; flex-direction: column; background: #1a1a1a;
+}
+#pdf-viewer:fullscreen .pdf-frame-wrap,
+#pdf-viewer:-webkit-full-screen .pdf-frame-wrap { flex: 1; height: auto; }
+#pdf-viewer:fullscreen .pdf-toolbar,
+#pdf-viewer:-webkit-full-screen .pdf-toolbar { border-radius: 0; }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1100px) {
   .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
@@ -598,6 +639,40 @@ section { padding: 120px var(--gutter); }
   </div>
 </section>
 
+<!-- COMPANY PROFILE -->
+<section style="background: var(--bg);" id="profile">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;">
+      <div class="section-tag" style="justify-content:center;">Company Profile</div>
+      <h2>Our credentials, in full</h2>
+      <p style="margin-top:16px;font-size:16px;color:var(--ink-3);line-height:1.7;max-width:560px;margin-left:auto;margin-right:auto;">Browse our full company profile — covering our services, delivery track record, and regional footprint.</p>
+    </div>
+    <div class="pdf-viewer" id="pdf-viewer">
+      <div class="pdf-toolbar">
+        <span class="pdf-label">ACT Plus Digital Solutions — Company Profile</span>
+        <div class="pdf-actions">
+          <button class="pdf-btn" id="pdf-fs-btn" onclick="togglePdfFullscreen()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+            <span id="pdf-fs-label">Full screen</span>
+          </button>
+          <a href="assets/act-plus-company-profile.pdf" download="ACT Plus Digital Solutions — Company Profile.pdf" class="pdf-btn pdf-btn-download">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download PDF
+          </a>
+        </div>
+      </div>
+      <div class="pdf-frame-wrap" id="pdf-frame-wrap">
+        <iframe
+          src="assets/act-plus-company-profile.pdf"
+          class="pdf-frame"
+          title="ACT Plus Digital Solutions Company Profile"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section style="background: var(--bg);">
   <div class="container">
@@ -702,6 +777,24 @@ if (params.get('success') === 'rfp') {
   const success = document.getElementById('rfp-success');
   if (form && success) { form.style.display = 'none'; success.style.display = 'block'; success.scrollIntoView({ behavior: 'smooth' }); }
 }
+
+function togglePdfFullscreen() {
+  const viewer = document.getElementById('pdf-viewer');
+  const label = document.getElementById('pdf-fs-label');
+  if (!document.fullscreenElement) {
+    (viewer.requestFullscreen || viewer.webkitRequestFullscreen || viewer.mozRequestFullScreen).call(viewer);
+  } else {
+    (document.exitFullscreen || document.webkitExitFullscreen || document.mozCancelFullScreen).call(document);
+  }
+}
+document.addEventListener('fullscreenchange', function() {
+  const label = document.getElementById('pdf-fs-label');
+  if (label) label.textContent = document.fullscreenElement ? 'Exit full screen' : 'Full screen';
+});
+document.addEventListener('webkitfullscreenchange', function() {
+  const label = document.getElementById('pdf-fs-label');
+  if (label) label.textContent = document.webkitFullscreenElement ? 'Exit full screen' : 'Full screen';
+});
 </script>
 </body>
 </html>
