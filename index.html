@@ -150,6 +150,12 @@ section { padding: 140px var(--gutter); }
 .btn:hover { background: var(--midnight); border-color: var(--midnight); }
 .btn .ar { transition: transform 240ms var(--ease); font-size: 18px; line-height: 0; }
 .btn:hover .ar { transform: translateX(4px); }
+.lang-toggle {
+  font-size: 13px; font-weight: 600; color: var(--ink-3);
+  border: 1px solid var(--line-2); padding: 6px 12px; border-radius: 2px;
+  transition: all 200ms; white-space: nowrap; flex-shrink: 0;
+}
+.lang-toggle:hover { color: var(--deep-sea); border-color: var(--deep-sea); }
 
 .btn-light { background: transparent; color: #fff; border-color: rgba(255,255,255,0.35); }
 .btn-light:hover { background: #fff; color: var(--deep-sea); border-color: #fff; }
@@ -662,6 +668,7 @@ section { padding: 140px var(--gutter); }
     <a href="partners.html">Partners</a>
     <a href="contact.html">Contact</a>
   </div>
+  <a href="ar/index.html" class="lang-toggle">عربي</a>
   <a href="contact.html" class="btn" style="padding:12px 22px;"><span>Book a conversation</span><span class="ar">→</span></a>
 </nav>
 
