@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>About ACT Plus Digital Solutions — IT Consulting &amp; Digital Transformation Partner | MENA</title>
 <meta name="description" content="ACT Plus Digital Solutions is a digital transformation partner and IT consulting company headquartered in Ramallah, Palestine, serving UAE, Saudi Arabia, Egypt, Iraq, Jordan and the wider MENA region." />
-<meta name="keywords" content="digital transformation partner UAE, digital transformation partner Saudi Arabia, IT consulting Middle East, digital transformation company MENA, digital transformation partner Palestine, IT consulting Ramallah, software development company Palestine, ACT Plus Digital Solutions" />
+<meta name="keywords" content="IT consulting company Palestine, digital transformation company Ramallah, software development company Palestine, IT consulting Ramallah, digital transformation partner MENA, digital transformation partner UAE, digital transformation partner Saudi Arabia, IT consulting Middle East, ACT Plus Digital Solutions founded 2019" />
 <meta name="author" content="ACT Plus Digital Solutions" />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://actplusds.com/about.html" />
@@ -30,25 +30,48 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "url": "https://actplusds.com/about.html",
-  "name": "About ACT Plus Digital Solutions",
-  "description": "ACT Plus Digital Solutions is an enterprise digital transformation partner headquartered in Ramallah, Palestine, delivering IT strategy, engineering, cybersecurity and managed services across MENA.",
-  "mainEntity": {
-    "@type": "Organization",
-    "name": "ACT Plus Digital Solutions",
-    "url": "https://actplusds.com",
-    "logo": "https://actplusds.com/assets/act-plus-logo.png",
-    "foundingDate": "2019",
-    "foundingLocation": "Ramallah, Palestine",
-    "slogan": "Accelerating Coverage Today",
-    "email": "info@actplusds.com",
-    "sameAs": [
-      "https://www.linkedin.com/company/actplusds",
-      "https://x.com/actplusds",
-      "https://www.instagram.com/actplusds"
-    ]
-  }
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://actplusds.com/about.html#webpage",
+      "url": "https://actplusds.com/about.html",
+      "name": "About ACT Plus Digital Solutions — IT Consulting & Digital Transformation Partner | MENA",
+      "description": "ACT Plus Digital Solutions is an IT consulting company and digital transformation partner founded in 2019 in Ramallah, Palestine, serving enterprises across MENA.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://actplusds.com/" },
+          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://actplusds.com/about.html" }
+        ]
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://actplusds.com/#organization",
+      "name": "ACT Plus Digital Solutions",
+      "alternateName": "ACT Plus",
+      "url": "https://actplusds.com",
+      "logo": "https://actplusds.com/assets/act-plus-logo.png",
+      "foundingDate": "2019",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Ramallah, Palestine"
+      },
+      "slogan": "Accelerating Coverage Today",
+      "email": "info@actplusds.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ramallah",
+        "addressRegion": "West Bank",
+        "addressCountry": "PS"
+      },
+      "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 25, "maxValue": 100 },
+      "areaServed": ["Palestine", "Jordan", "Iraq", "UAE", "Saudi Arabia", "Egypt", "Canada"],
+      "sameAs": [
+        "https://www.linkedin.com/company/act-plus-digital-solutions"
+      ]
+    }
+  ]
 }
 </script>
 

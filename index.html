@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>ACT Plus Digital Solutions — Enterprise Digital Transformation Partner | MENA</title>
 <meta name="description" content="ACT Plus Digital Solutions is an enterprise digital transformation partner headquartered in Ramallah — delivering IT strategy, engineering, cybersecurity and managed services across Palestine, Jordan, Iraq, UAE and the wider MENA region." />
-<meta name="keywords" content="digital transformation partner MENA, IT consulting Palestine, digital transformation UAE, digital transformation Jordan, IT consulting Middle East, software development Palestine, enterprise IT consulting MENA, cybersecurity SOC MENA, ACT Plus Digital Solutions, Ramallah IT company" />
+<meta name="keywords" content="digital transformation partner MENA, IT consulting company Palestine, IT consulting Palestine, digital transformation UAE, digital transformation Jordan, IT consulting Middle East, software development company Ramallah, enterprise IT consulting MENA, SOC as a service MENA, CTO on demand MENA, cybersecurity MENA, ACT Plus Digital Solutions" />
 <meta name="author" content="ACT Plus Digital Solutions" />
 <meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#003A55" />
@@ -37,28 +37,84 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "ACT Plus Digital Solutions",
-  "url": "https://actplusds.com",
-  "logo": "https://actplusds.com/assets/act-plus-logo.png",
-  "description": "Enterprise digital transformation partner headquartered in Ramallah, Palestine — delivering IT strategy, engineering, cybersecurity and managed services across MENA.",
-  "foundingLocation": {
-    "@type": "Place",
-    "name": "Ramallah, Palestine"
-  },
-  "areaServed": ["Palestine", "Jordan", "Iraq", "United Arab Emirates", "Saudi Arabia", "Egypt", "MENA"],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Ramallah",
-    "addressCountry": "PS"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "sales",
-    "email": "info@actplusds.com"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/company/act-plus-digital-solutions"
+  "@graph": [
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": "https://actplusds.com/#organization",
+      "name": "ACT Plus Digital Solutions",
+      "alternateName": "ACT Plus",
+      "url": "https://actplusds.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://actplusds.com/assets/act-plus-logo.png",
+        "width": 400,
+        "height": 120
+      },
+      "image": "https://actplusds.com/assets/act-plus-logo.png",
+      "description": "Enterprise digital transformation partner headquartered in Ramallah, Palestine — delivering IT strategy, engineering, cybersecurity and managed services across Palestine, Jordan, Iraq, UAE and the wider MENA region.",
+      "foundingDate": "2019",
+      "email": "info@actplusds.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ramallah",
+        "addressRegion": "West Bank",
+        "addressCountry": "PS"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 31.9038,
+        "longitude": 35.2034
+      },
+      "areaServed": [
+        { "@type": "Country", "name": "Palestine" },
+        { "@type": "Country", "name": "Jordan" },
+        { "@type": "Country", "name": "Iraq" },
+        { "@type": "Country", "name": "United Arab Emirates" },
+        { "@type": "Country", "name": "Saudi Arabia" },
+        { "@type": "Country", "name": "Egypt" },
+        { "@type": "Country", "name": "Canada" }
+      ],
+      "knowsAbout": [
+        "Digital Transformation",
+        "IT Consulting",
+        "Custom Software Development",
+        "Cybersecurity",
+        "Security Operations Center",
+        "CTO as a Service",
+        "AI and Automation",
+        "Staff Augmentation",
+        "ERP Implementation",
+        "Mobile App Development"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "info@actplusds.com",
+          "availableLanguage": ["English", "Arabic"]
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/act-plus-digital-solutions"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://actplusds.com/#website",
+      "url": "https://actplusds.com",
+      "name": "ACT Plus Digital Solutions",
+      "inLanguage": ["en", "ar"],
+      "publisher": { "@id": "https://actplusds.com/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://actplusds.com/#webpage",
+      "url": "https://actplusds.com/",
+      "name": "ACT Plus Digital Solutions — Enterprise Digital Transformation Partner | MENA",
+      "isPartOf": { "@id": "https://actplusds.com/#website" },
+      "about": { "@id": "https://actplusds.com/#organization" },
+      "description": "Enterprise digital transformation partner headquartered in Ramallah — delivering IT strategy, engineering, cybersecurity and managed services across MENA."
+    }
   ]
 }
 </script>
