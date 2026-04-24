@@ -52,6 +52,18 @@
 | Formspree (contact form) | — | endpoint: `xrerzepn` |
 | Formspree (RFP form) | — | endpoint: `mjgjbgwk` |
 | Booking calendar | — | https://calendar.app.google/iimx72oQiLnDs8EJ9 |
+| Apple Business (Maps) | Kareem AlWazir | hello@ramlatech.com |
+| Google My Business (Maps) | Kareem AlWazir | kareem@ramlatech.com |
+
+### Business Listings
+
+| Platform | Status | Location |
+|---|---|---|
+| Google Maps | Active | Cairo Street, Al Teereh, Ramallah, Palestine |
+| Apple Maps | Active | Cairo Street, Al Teereh, Ramallah, Palestine |
+
+**Apple Maps domain verification:** `actplusds.com` was verified by adding a TXT record to Cloudflare DNS.  
+**Google My Business:** Managed at https://business.google.com via `kareem@ramlatech.com`.
 
 ---
 
