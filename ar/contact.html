@@ -300,11 +300,23 @@ section { padding: 120px var(--gutter); }
   section { padding: 80px 24px; }
   .booking-layout, .contact-layout { grid-template-columns: 1fr; gap: 48px; }
   .nav-links { display: none; }
+  .nav .lang-toggle { display: none; }
+  .hamburger { display: flex; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 640px) {
   .form-row, .services-checks { grid-template-columns: 1fr; }
 }
+/* MOBILE NAV */
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; border: none; background: none; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); border-radius: 1px; transition: transform 250ms, opacity 250ms; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-menu { display: none; position: fixed; inset: 0; z-index: 99; background: #fff; flex-direction: column; padding: 88px 28px 40px; overflow-y: auto; }
+.mobile-menu.open { display: flex; }
+.mobile-menu .mm-link { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--ink); padding: 18px 0; border-bottom: 1px solid var(--line); display: block; text-decoration: none; }
+.mobile-menu .mm-footer { margin-top: 32px; display: flex; flex-direction: column; gap: 14px; }
 </style>
 </head>
 <body>
@@ -324,7 +336,20 @@ section { padding: 120px var(--gutter); }
     <img src="../assets/act-logo-dark.svg" alt="ACT Plus" class="logo-full" />
     <span class="logo-wordmark">Digital Solutions</span>
   </a>
+  <button class="hamburger" id="hamburger" aria-label="فتح القائمة" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="../index.html#intro" class="mm-link">عن الشركة</a>
+  <a href="../index.html#pillars" class="mm-link">خبراتنا</a>
+  <a href="../index.html#industries" class="mm-link">القطاعات</a>
+  <a href="../index.html#soc" class="mm-link">الأمن</a>
+  <a href="../partners.html" class="mm-link">الشركاء</a>
+  <a href="contact.html" class="mm-link">تواصل معنا</a>
+  <div class="mm-footer">
+    <a href="../contact.html" class="lang-toggle">EN</a>
+    <a href="#book" class="btn"><span>احجز استشارة</span><span class="ar">←</span></a>
+  </div>
+</div>
 
 <!-- HERO -->
 <section class="page-hero">
@@ -660,6 +685,25 @@ if (params.get('success') === 'rfp') {
   const success = document.getElementById('rfp-success');
   if (form && success) { form.style.display = 'none'; success.style.display = 'block'; success.scrollIntoView({ behavior: 'smooth' }); }
 }
+(function(){
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobile-menu');
+  if(!btn||!menu) return;
+  btn.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  menu.querySelectorAll('.mm-link').forEach(function(a){
+    a.addEventListener('click', function(){
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+      document.body.style.overflow = '';
+    });
+  });
+})();
 </script>
 </body>
 </html>
